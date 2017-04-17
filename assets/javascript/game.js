@@ -1,52 +1,69 @@
-
-//global variables
-var gameOn = false;
-var chooseDefender = false;
-var playerDeath = false;
-var deadHeros=[];
-var attacker;
-var foe;
-var winner;
-
+var fighters=[];
 
 //hero objects
 var ironMan = {
 	hp: 100,
 	attackPower: 10,
+	counter: 20,
 }
 var spiderMan = {
 	hp:120,
 	attackPower: 7,
+	counter: 30,
 }
 var captainAmerica = {
 	hp: 140,
 	attackPower: 9,
+	counter: 25,
 }
 var scarletWitch ={
 	hp: 160,
 	attackPower: 12,
+	counter: 35,
 }
-//manages click events
-//only works during char selection and on game reset
-$("#players").on("click", function () {
-	if (!(gameOn) && !(chooseDefender)) { //check start game conditions
-		chooseDefender=true;// flags that user needs to choose opponent next
-		$("#players").html("Enemy");
-		attacker.appendTo(".hero");//adds player to battle
-		console.log(attacker);
-		$(".battleWorld").fadeIn("slow");
-	} else if (chooseDefender) {
-		chooseDefender=false;
-		gameOn=true;
-		$("#alerts").html("");
-		foe.appendTo(".opponent");
-		console.log(foe);
-		}
-})
+//on click choose character
 
-function battle() {
-	var attack = parseInt(attacker.data("attack-power"));//get player attack power
-	var ohp=parseInt(foe.data("hp")); //get foe hit points
-	ohp-=attack; //decrease for hit points
-	foe.data("hp", ohp); //change data on foe hp
-}
+$('.one').on('click', function() {
+    $('.hero').append($('.one'));
+    $('.enemies').append($('.two'));
+    $('.enemies').append($('.three'));
+    $('.enemies').append($('.four'));
+    $("#playerChoice").remove();
+    $(fighters).append(".one");
+
+    console.log("Got a click on Iron Man");
+    console.log(fighters);
+
+});    
+
+$('.two').on('click', function() {
+    $('.hero').append($('.two'));
+    $('.enemies').append($('.one'));
+    $('.enemies').append($('.three'));
+    $('.enemies').append($('.four'));
+    $("#playerChoice").remove();
+
+    console.log("Got a click on Spider-Man");
+
+});    
+
+$('.three').on('click', function() {
+    $('.hero').append($('.three'));
+    $('.enemies').append($('.one'));
+    $('.enemies').append($('.two'));
+    $('.enemies').append($('.four'));
+    $("#playerChoice").remove();
+    console.log("Got a click on Captain America");
+
+});    
+
+$('.four').on('click', function() {
+    $('.hero').append($('.four'));
+    $('.enemies').append($('.one'));
+    $('.enemies').append($('.two'));
+    $('.enemies').append($('.three'));
+    $("#playerChoice").remove();
+
+    console.log("Got a click on Scarlet Witch");
+
+});

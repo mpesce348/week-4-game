@@ -1,18 +1,21 @@
 .one {
 	width: 200px;
+	float: left;
 
 }
 .two {
 	width: 200px;
+	float: left;
 
 }
 .three {
 	width: 200px;
+	float: left;
 
 }
 .four {
 	width: 200px;
-
+	float: left;
 }
 h1 {
 	text-align: center;
