@@ -1,13 +1,65 @@
-img {
+.one {
 	width: 200px;
+
+}
+.two {
+	width: 200px;
+
+}
+.three {
+	width: 200px;
+
+}
+.four {
+	width: 200px;
+
 }
 h1 {
 	text-align: center;
+	
 }
 #backgroundImg {
-	width: 100%
+	width: 100%;
 
+}
+body {
+	background-color: transparent !important;
+	opacity: 0.9;
+
+}
+h2, h3 {
+	color: white;
+	margin-left: 30px;
+}
+.attack {
+	margin-left: 30px;
+	padding-left: 30px;
 }
 html {
 	background-image: url(http://i.imgur.com/VQtdhPu.jpg);
+	margin-left: 200px;
+}
+.marvel {
+	width: 400px;
+	max-width: 400px;
+	margin-left: 35%;
+	
+}
+.btn {
+	margin-left: 50px;
+}
+#enemies {
+	margin-left: 50px;
+}
+#choiceToAttack {
+	margin-left: 50px;
+}
+#playerChoice {
+	margin-left: 50px;
+}
+.battleWorld {
+	margin-left: 50px;
+}
+#players {
+	margin-left: 100px;
 }

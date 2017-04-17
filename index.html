@@ -7,15 +7,21 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	</head>
 	<body>
-	<!--<img id="backgroundImg" src="assets/images/background.jpg">-->
+		<!--<img id="backgroundImg" src="assets/images/background.jpg">-->
 		<div>
+			<img class="marvel" src="assets/images/marvel.png">
 			<h1>Marvel Melee</h1>
 		</div>
+		<div class="battleWorld">
+			<div class="hero"></div>
+			<h2>VS</h2>
+			<div class="opponent"></div>
+		</div>
 		<div id="playerChoice">
-			<h2>Your Character: </h2>
+			<h2>Choose Your Character: </h2>
 		</div>
 		<div id="players">
-			<img class="one" src="assets/images/ironMan.png">
+			<img class="one" data="attack-power" id="iron-Man" src="assets/images/ironMan.png">
 			<img class="two" src="assets/images/spidey.png">
 			<img class="three" src="assets/images/cap.png">
 			<img class="four" src="assets/images/scarletWitch.png">
@@ -27,17 +33,17 @@
 			</div>
 		</div>
 		<div id="attackBtn">
-			<button type="button" class="btn">Attack!</button>
+			<button id="attack" type="button" class="btn">Attack!</button>
 		</div>
 		<div id="choiceToAttack">
 			<h3>Defender:</h3>
 		</div>
 		<div >
-			<div id="gameAlert">
-				
+			<div id = "reset">
+				<button class = "btn">Try Again?</button>
+				<div id = "alerts"></div>
 			</div>
 		</div>
-
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 		<script type="text/javascript" src="assets/javascript/game.js"></script>
 	</body>
