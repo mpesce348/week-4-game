@@ -1,0 +1,13 @@
+img {
+	width: 200px;
+}
+h1 {
+	text-align: center;
+}
+#backgroundImg {
+	width: 100%
+
+}
+html {
+	background-image: url(http://i.imgur.com/VQtdhPu.jpg);
+}
