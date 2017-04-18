@@ -1,69 +1,163 @@
-var fighters=[];
+var firstPlayer;
+var secondPlayer;
 
 //hero objects
 var ironMan = {
 	hp: 100,
-	attackPower: 10,
+	attack: 10,
 	counter: 20,
 }
 var spiderMan = {
 	hp:120,
-	attackPower: 7,
+	attack: 7,
 	counter: 30,
 }
 var captainAmerica = {
 	hp: 140,
-	attackPower: 9,
+	attack: 9,
 	counter: 25,
 }
 var scarletWitch ={
 	hp: 160,
-	attackPower: 12,
+	attack: 12,
 	counter: 35,
 }
-//on click choose character
 
-$('.one').on('click', function() {
-    $('.hero').append($('.one'));
-    $('.enemies').append($('.two'));
-    $('.enemies').append($('.three'));
-    $('.enemies').append($('.four'));
-    $("#playerChoice").remove();
-    $(fighters).append(".one");
+$(".one").on("click", function() {debugger
+	if (!firstPlayer) {
+		$(".hero").append($(".one"));
+		$(".enemies").append($(".two"));
+		$(".enemies").append($(".three"));
+		$(".enemies").append($(".four"));
+		firstPlayer=ironMan;
+	}
 
-    console.log("Got a click on Iron Man");
-    console.log(fighters);
-
-});    
-
-$('.two').on('click', function() {
-    $('.hero').append($('.two'));
-    $('.enemies').append($('.one'));
-    $('.enemies').append($('.three'));
-    $('.enemies').append($('.four'));
-    $("#playerChoice").remove();
-
-    console.log("Got a click on Spider-Man");
-
-});    
-
-$('.three').on('click', function() {
-    $('.hero').append($('.three'));
-    $('.enemies').append($('.one'));
-    $('.enemies').append($('.two'));
-    $('.enemies').append($('.four'));
-    $("#playerChoice").remove();
-    console.log("Got a click on Captain America");
-
-});    
-
-$('.four').on('click', function() {
-    $('.hero').append($('.four'));
-    $('.enemies').append($('.one'));
-    $('.enemies').append($('.two'));
-    $('.enemies').append($('.three'));
-    $("#playerChoice").remove();
-
-    console.log("Got a click on Scarlet Witch");
+	$(".two").on("click", function() {debugger
+		$(".opponent").append($(".two"));
+		secondPlayer=spiderMan;
+		$(".hpsecondPlayer").html(secondPlayer.hp);
+	});
+	$(".three").on("click", function() {
+		$(".opponent").append($(".three"));
+		secondPlayer=captainAmerica;
+		$(".hpsecondPlayer").html(secondPlayer.hp);
+	});
+	$(".four").on("click", function() {
+		$(".opponent").append($(".four"));
+		secondPlayer=scarletWitch;
+		$(".hpsecondPlayer").html(secondPlayer.hp);
+	});
 
 });
+$(".two").on("click", function() {
+	if (!firstPlayer) {
+		$(".hero").append($(".two"));
+		$(".enemies").append($(".one"));
+		$(".enemies").append($(".three"));
+		$(".enemies").append($(".four"));
+		firstPlayer=spiderMan;
+	}
+
+	$(".one").on("click", function() {
+		$(".opponent").append($(".one"));
+		secondPlayer=ironMan;
+		$(".hpsecondplayer").html(secondPlayer.hp);
+	});
+	$(".three").on("click", function() {
+		$(".opponent").append($(".three"));
+		secondPlayer=captainAmerica;
+		$(".hpsecondplayer").html(secondPlayer.hp);
+	});
+	$(".four").on("click", function() {
+		$(".opponent").append($(".four"));
+		secondPlayer=scarletWitch;
+		$(".hpsecondplayer").html(secondPlayer.hp);
+	});
+	
+});
+$(".three").on("click", function() {
+	if (!firstPlayer) {
+		$(".hero").append($(".three"));
+		$(".enemies").append($(".two"));
+		$(".enemies").append($(".one"));
+		$(".enemies").append($(".four"));
+		firstPlayer=captainAmerica;
+	}
+
+	$(".two").on("click", function() {
+		$(".opponent").append($(".two"));
+		secondPlayer=spiderMan;
+		$(".hpsecondplayer").html(secondPlayer.hp);
+	});
+	$(".one").on("click", function() {
+		$(".opponent").append($(".one"));
+		secondPlayer=ironMan;
+		$(".hpsecondplayer").html(secondPlayer.hp);
+	});
+	$(".four").on("click", function() {
+		$(".opponent").append($(".four"));
+		secondPlayer=scarletWitch;
+		$(".hpsecondplayer").html(secondPlayer.hp);
+	});
+	
+});
+$(".four").on("click", function() {
+	if (!firstPlayer) {
+		$(".hero").append($(".four"));
+		$(".enemies").append($(".two"));
+		$(".enemies").append($(".three"));
+		$(".enemies").append($(".one"));
+		firstPlayer=scarletWitch;
+	}
+
+	$(".two").on("click", function() {
+		$(".opponent").append($(".two"));
+		secondPlayer=spiderMan;
+		$(".hpsecondplayer").html(secondPlayer.hp);
+	});
+	$(".three").on("click", function() {
+		$(".opponent").append($(".three"));
+		secondPlayer=captainAmerica;
+		$(".hpsecondplayer").html(secondPlayer.hp);
+	});
+	$(".one").on("click", function() {
+		$(".opponent").append($(".one"));
+		secondPlayer=ironMan;
+		$(".hpsecondplayer").html(secondPlayer.hp);
+	});
+	
+});
+
+$("#attackBtn").on("click", function(){
+	secondPlayer.hp-=firstPlayer.attack;
+	firstPlayer.attack+=firstPlayer.attack;
+	firstPlayer.hp-=secondPlayer.counter;
+	$('.hpFirstPlayer').html(firstPlayer.hp);
+    $('.hpSecondPlayer').html(secondPlayer.hp);
+    
+    	
+    	if (secondPlayer == ironMan && secondPlayer.hp <= 0){
+    		$('.one').remove();
+    		
+    	}
+    	else if (secondPlayer == spiderMan && secondPlayer.hp <= 0){
+    		$('.two').remove(); 
+    		
+    	}
+    	else if (secondPlayer == captainAmerica && secondPlayer.hp <= 0){
+    		$('.three').remove();
+    		
+   		}
+    	else if (secondPlayer == scarletWitch && secondPlayer.hp <= 0){
+    		$('.four').remove();
+    		
+   		}
+	});
+
+//defender HP = 0, remove from defender area
+
+//player chooses new opponent
+
+//player wins by defeating all opponents
+
+//player loses if HP goes to 0 or below
