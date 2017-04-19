@@ -1,6 +1,4 @@
 var firstPlayer;
-//var firstPlayerBaseAttack = firstPlayer.attack;
-
 var secondPlayer;
 
 //hero objects
@@ -24,6 +22,7 @@ var scarletWitch = {
     attack:7,
     counter: 27,
 }
+
 
 $(".one").on("click", function() {
     if (!firstPlayer) {
@@ -165,11 +164,3 @@ $("#attackBtn").on("click", function() {
 $('[data-command="reset"]').click(function () {    
    window.location.href = window.location.href;
 });
-
-//defender HP = 0, remove from defender area
-
-//player chooses new opponent
-
-//player wins by defeating all opponents
-
-//player loses if HP goes to 0 or below
