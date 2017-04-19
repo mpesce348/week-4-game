@@ -12,45 +12,51 @@
 			<img class="marvel" src="assets/images/marvel.png">
 			<h1>Marvel Melee</h1>
 		</div>
-		<div class="battleWorld">
-			<div class="hero">
-				<p class="hpFirstPlayer"></p>
-			</div>
-			<h2>VS</h2>
-			<div class="opponent">
-				<p class="hpSecondPlayer"></p>
-			</div>
-		</div>
 		<div id="playerChoice">
 			<h2>Choose Your Hero: </h2>
 		</div>
-		<div id="players">
-			<div id=ironMan>
-				<img class="one" id="iron-Man" src="assets/images/ironMan.png">
+		<div class="row col-lg-12">
+			<div class="col-lg-5" id="battleWorld">
+				<div class="hero">
+					<p class="hpFirstPlayer"> HP: </p>
+				</div>
+				<div class="col-lg-5" id="choiceToAttack">
+					<h3>Defender:</h3>
+					<div class="opponent">
+						<p class="hpSecondPlayer">HP: </p>
+					</div>
+				</div>
 			</div>
-			<div>
-				<img class="two" src="assets/images/spidey.png">
+		</div>
+		<div class="row">
+			<div id="players">
+				<div id=ironMan>
+					<img class="one" id="iron-Man" src="assets/images/ironMan.png">
+				</div>
+				<div>
+					<img class="two" src="assets/images/spidey.png">
+				</div>
+				<div>
+					<img class="three" src="assets/images/cap.png">
+				</div>
+				<div>
+					<img class="four" src="assets/images/scarletWitch.png">
+				</div>
+				<br>
 			</div>
-			<div>
-				<img class="three" src="assets/images/cap.png">
-			</div>
-			<div>
-				<img class="four" src="assets/images/scarletWitch.png">
-			</div>
-			<br>
 		</div>
 		<div>
-		<br>
-			<div class="enemies">
-				<h3>Former Friends: </h3>
+			<br>
+			<div class="row">
+				<div class="enemies">
+					<h3>Former Friends: </h3>
+				</div>
 			</div>
 		</div>
 		<div id="attackBtn">
 			<button id="attack" type="button" class="btn">Attack!</button>
 		</div>
-		<div id="choiceToAttack">
-			<h3>Defender:</h3>
-		</div>
+		
 		<div >
 			<div id = "reset">
 				<button class = "btn">Try Again?</button>

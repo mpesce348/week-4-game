@@ -60,9 +60,19 @@ html {
 #playerChoice {
 	margin-left: 50px;
 }
-.battleWorld {
+#battleWorld {
 	margin-left: 50px;
 }
 #players {
 	margin-left: 100px;
+}
+.hero {
+	
+}
+.opponent {
+
+}
+#formerFriends {
+	margin-left: 100px;
+	padding-left: 100px;
 }
