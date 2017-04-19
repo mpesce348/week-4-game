@@ -1,28 +1,28 @@
 var firstPlayer;
-var firstPlayerBaseAttack = firstPlayer.attack;
+//var firstPlayerBaseAttack = firstPlayer.attack;
 
 var secondPlayer;
 
 //hero objects
 var ironMan = {
     hp: 100,
-    attack: 10,
-    counter: 20,
+    attack: 30,
+    counter: 30,
 }
 var spiderMan = {
     hp: 120,
-    attack: 7,
-    counter: 30,
+    attack: 25,
+    counter: 40,
 }
 var captainAmerica = {
     hp: 140,
-    attack: 9,
-    counter: 25,
+    attack: 20,
+    counter: 35,
 }
 var scarletWitch = {
     hp: 160,
-    attack: 12,
-    counter: 35,
+    attack: 30,
+    counter: 45,
 }
 
 $(".one").on("click", function() {
@@ -162,10 +162,9 @@ $("#attackBtn").on("click", function() {
     }
 });
 
-$("#resetBtn").on("click", function() {
-	$()
-})
-
+$('[data-command="reset"]').click(function () {    
+   window.location.href = window.location.href;
+});
 
 //defender HP = 0, remove from defender area
 
