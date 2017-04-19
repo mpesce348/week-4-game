@@ -5,24 +5,24 @@ var secondPlayer;
 
 //hero objects
 var ironMan = {
-    hp: 100,
-    attack: 30,
-    counter: 30,
+    hp: 180,
+    attack: 6,
+    counter: 27,
 }
 var spiderMan = {
-    hp: 120,
-    attack: 25,
-    counter: 40,
+    hp: 130,
+    attack: 4,
+    counter: 21,
 }
 var captainAmerica = {
-    hp: 140,
-    attack: 20,
-    counter: 35,
+    hp: 110,
+    attack: 4,
+    counter: 19,
 }
 var scarletWitch = {
-    hp: 160,
-    attack: 30,
-    counter: 45,
+    hp: 170,
+    attack:7,
+    counter: 27,
 }
 
 $(".one").on("click", function() {
